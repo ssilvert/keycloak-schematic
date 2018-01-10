@@ -12,12 +12,34 @@
         },
         "sourceDir": {
             "type": "string",
-            "description": "The path of the source directory.",
+            "description": "The path of the source directory (usually 'src').",
             "default": "src",
             "alias": "sd",
+            "visible": true
+        },
+        "url": {
+            "type": "string",
+            "description": "The the url to the Keycloak auth server.",
+            "default": "http://localhost:8080/auth",
+            "alias": "u",
+            "visible": true
+        },
+        "realm": {
+            "type": "string",
+            "description": "The Keycloak realm for this app.",
+            "default": "master",
+            "alias": "r",
+            "visible": true
+        },
+        "clientId": {
+            "type": "string",
+            "description": "The Keycloak client id for this app.",
+            "default": "ngapp",
+            "alias": "cid",
             "visible": true
         }
     },
     "required": [
+        "clientId"
     ]
 }

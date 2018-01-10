@@ -40,12 +40,6 @@
     },
     "service": {
         "extends": "@schematics/angular:service"
-    },
-    "add-service": {
-      "aliases": [ "ks" ],
-      "factory": "./add-service/index#addKeycloakService",
-      "description": "Add Keycloak service to NgModule.",
-      "schema": "./add-service/schema.json"
     }
   }
 }

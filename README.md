@@ -1,5 +1,5 @@
 # keycloak-schematic
-Schematic to add Keycloak support Angular CLI applications
+Schematic to add Keycloak support to Angular CLI applications
 
 ### Testing
 

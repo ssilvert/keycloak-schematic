@@ -11,11 +11,12 @@ if (environment.production) {
 }
 
 const configOptions = {
-    url: 'http://localhost:8080/auth',
-    realm: 'master',
-    clientId: 'ngapp'
+    url: '<%= url %>',
+    realm: '<%= realm %>',
+    clientId: '<%= clientId %>'
 };
 
+// You can also use a keycloak.json file gerated from the Keycloak admin console
 //const configOptions:string = 'http://localhost:4200/assets/keycloak.json';
 
 
