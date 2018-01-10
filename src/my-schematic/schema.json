@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "KeycloakSchematicsSchema",
+  "title": "Keycloak Schematics Schema",
+  "type": "object",
+  "properties": {
+    
+  },
+  "required": [
+    
+  ]
+}

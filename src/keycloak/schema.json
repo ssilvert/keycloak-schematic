@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "KeycloakSchematicsSchema",
+    "title": "Keycloak Schematics Schema",
+    "type": "object",
+    "properties": {
+        "appRoot": {
+            "type": "string",
+            "description": "The path to create keycloak-service (usually 'app').",
+            "default": "app",
+            "visible": true
+        },
+        "sourceDir": {
+            "type": "string",
+            "description": "The path of the source directory.",
+            "default": "src",
+            "alias": "sd",
+            "visible": true
+        }
+    },
+    "required": [
+    ]
+}

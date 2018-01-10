@@ -1,0 +1,29 @@
+{
+    "name": "zkeycloak-schematic",
+    "version": "0.0.0",
+    "description": "A schematics",
+    "scripts": {
+        "build": "tsc -p tsconfig.json",
+        "test": "npm run build && jasmine **/*_spec.js"
+    },
+    "keywords": [
+        "schematics"
+    ],
+    "author": "Stan Silvert",
+    "license": "Apache-2.0",
+    "licenses": [
+        {
+            "type": "Apache-2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ],
+    "schematics": "./src/collection.json",
+    "devDependencies": {
+        "@angular-devkit/core": "^0.0.22",
+        "@angular-devkit/schematics": "^0.0.42",
+        "@types/jasmine": "^2.6.0",
+        "@types/node": "^8.0.31",
+        "jasmine": "^2.8.0",
+        "typescript": "^2.5.2"
+    }
+}
