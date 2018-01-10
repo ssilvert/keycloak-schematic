@@ -6,6 +6,7 @@ src/**/*.d.ts
 # For now, need to include these files explicitly
 !src/keycloak/files/__appRoot__/keycloak-service/keycloak.d.ts
 !src/keycloak/files/__approot__/keycloak-service/keycloak.js
+!src/keycloak/schema.d.ts
 
 # Intellij
 ###################

@@ -12,17 +12,18 @@ import {
     schematic,
     url,
 } from '@angular-devkit/schematics';
+import {Schema as KeycloakOptions} from './schema';
 
-function servicePath(options: any): Path {
+function servicePath(options: KeycloakOptions): Path {
     return normalize('/' + options.appRoot + '/keycloak-service');
 }
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
-export function keycloakSchematic(options: any): Rule {
+export function keycloakSchematic(options: KeycloakOptions): Rule {
 
-    const mainFromPath = normalize('/' + options.sourceDir + '/main.ts');
-    const mainToPath = normalize('/' + options.sourceDir + '/main.ts.no-keycloak');
+    const mainFromPath: string = normalize('/' + options.sourceDir + '/main.ts');
+    const mainToPath: string = normalize('/' + options.sourceDir + '/main.ts.no-keycloak');
     
     const serviceOps = {
         name: 'keycloak',

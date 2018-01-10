@@ -16,7 +16,9 @@ const configOptions = {
     clientId: '<%= clientId %>'
 };
 
-// You can also use a keycloak.json file gerated from the Keycloak admin console
+// You can also use a keycloak.json file generated from the Keycloak admin console.
+// Just download the file and copy to your /assets directory.  Then uncomment
+// below and use the url instead of the configOptions above.
 //const configOptions:string = 'http://localhost:4200/assets/keycloak.json';
 
 
