@@ -18,8 +18,6 @@ function servicePath(options: KeycloakOptions): Path {
     return normalize('/' + options.appRoot + '/keycloak-service');
 }
 
-// You don't have to export the function as default. You can also have more than one rule factory
-// per file.
 export function keycloakSchematic(options: KeycloakOptions): Rule {
 
     const mainFromPath: string = normalize('/' + options.sourceDir + '/main.ts');
@@ -40,17 +38,22 @@ export function keycloakSchematic(options: KeycloakOptions): Rule {
             context.logger.info('Keycloak Schematic: ' + JSON.stringify(options));
         },
         
+        // Move the developer's main.ts to a backup file.
+        // Have to do it using read/create/delete because tree.move() does a 
+        // 'symbolic' move that is applied at the end.  Won't work when we want
+        // to replace the file with something coming from our ./files
         (_tree: Tree) => {
             const bytes: Buffer = <Buffer>_tree.read(mainFromPath);
             _tree.create(mainToPath, bytes);
             _tree.delete(mainFromPath);
         },
         
+        // Use the existing service schematic to add our service to app.module.
+        // The skeleton service it creates will be overwritten by ./files
         schematic('service', serviceOps),
         
         mergeWith(apply(url('./files'), [
             template({
-                //  INDEX: options.index,
                 appRoot: options.appRoot,
                 realm: options.realm,
                 clientId: options.clientId,

@@ -1,7 +1,7 @@
 {
-    "name": "zkeycloak-schematic",
-    "version": "0.0.0",
-    "description": "A schematics",
+    "name": "@ssilvert/keycloak-schematic",
+    "version": "0.1.0",
+    "description": "A schematic that installs Keycloak Client in Angular CLI Applications",
     "scripts": {
         "build": "tsc -p tsconfig.json",
         "test": "npm run build && jasmine **/*_spec.js"
@@ -18,7 +18,7 @@
         }
     ],
     "schematics": "./src/collection.json",
-    "devDependencies": {
+    "dependencies": {
         "@angular-devkit/core": "^0.0.22",
         "@angular-devkit/schematics": "^0.0.42",
         "@types/jasmine": "^2.6.0",

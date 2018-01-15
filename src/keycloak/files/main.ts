@@ -1,10 +1,10 @@
 import {enableProdMode} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
-import {AppModule} from './app/app.module';
+import {AppModule} from './<%= appRoot %>/app.module';
 import {environment} from './environments/environment';
 
-import {KeycloakService} from './app/keycloak-service/keycloak.service';
+import {KeycloakService} from './<%= appRoot %>/keycloak-service/keycloak.service';
 
 if (environment.production) {
     enableProdMode();
