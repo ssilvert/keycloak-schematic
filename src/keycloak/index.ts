@@ -7,7 +7,6 @@ import {
     apply,
     chain,
     mergeWith,
-    move,
     template,
     schematic,
     url,
@@ -54,13 +53,13 @@ export function keycloakSchematic(options: KeycloakOptions): Rule {
         
         mergeWith(apply(url('./files'), [
             template({
+                sourceDir: options.sourceDir,
                 appRoot: options.appRoot,
                 realm: options.realm,
                 clientId: options.clientId,
                 url: options.url,
             }),
             
-            move(options.sourceDir),
         ]), MergeStrategy.Overwrite),
         
     ]);

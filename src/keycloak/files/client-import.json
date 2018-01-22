@@ -1,0 +1,14 @@
+{
+    "clientId": "<%= clientId %>",
+    "name" : "<%= clientId %>",
+    "description" : "Created with keycloak-schematic",
+    "rootUrl": "http://localhost:4200",
+    "baseUrl": "http://localhost:4200",
+    "redirectUris": [
+        "/*"
+    ],
+    "webOrigins": [
+        "http://localhost:4200"
+    ]
+}
+

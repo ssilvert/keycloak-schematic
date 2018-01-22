@@ -1,9 +1,6 @@
 import {Tree, VirtualTree} from '@angular-devkit/schematics';
 import {SchematicTestRunner} from '@angular-devkit/schematics/testing';
 import * as path from 'path';
-//import {createAppModule, getFileContent} from '@angular-devkit/schematics/utility/test';
-//import {Schema as ComponentOptions} from './schema';
-
 
 const collectionPath = path.join(__dirname, '../collection.json');
 
@@ -28,10 +25,11 @@ describe('keycloak-schematic', () => {
         expect(startMain).toEqual(backedUpMain);
     });
 
-    it('copies keycloak-service files and main.ts', () => {
+    it('copies needed files', () => {
         const tree = runner.runSchematic('keycloak', {'clientId': 'ngApp'}, appTree);
         const files: string[] = tree.files;
 
+        expect(files.indexOf('/client-import.json')).toBeGreaterThanOrEqual(0);
         expect(files.indexOf('/src/main.ts')).toBeGreaterThanOrEqual(0);
         expect(files.indexOf('/src/app/keycloak-service/keycloak.d.ts')).toBeGreaterThanOrEqual(0);
         expect(files.indexOf('/src/app/keycloak-service/keycloak.http.ts')).toBeGreaterThanOrEqual(0);
