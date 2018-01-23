@@ -3,6 +3,7 @@ import {
     MergeStrategy,
     Rule,
     SchematicContext,
+    SchematicsException,
     Tree,
     apply,
     chain,
@@ -18,6 +19,10 @@ function servicePath(options: KeycloakOptions): Path {
 }
 
 export function keycloakSchematic(options: KeycloakOptions): Rule {
+
+    if (!options.clientId) {
+        throw new SchematicsException(`clientId option is required.`);
+    }
 
     const mainFromPath: string = normalize('/' + options.sourceDir + '/main.ts');
     const mainToPath: string = normalize('/' + options.sourceDir + '/main.ts.no-keycloak');

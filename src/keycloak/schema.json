@@ -34,7 +34,6 @@
         "clientId": {
             "type": "string",
             "description": "The Keycloak client id for this app.",
-            "default": "ngapp",
             "alias": "cid",
             "visible": true
         }

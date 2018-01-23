@@ -1,32 +1,38 @@
 {
-    "name": "@ssilvert/keycloak-schematic",
-    "version": "0.1.0",
-    "description": "A schematic that installs Keycloak Client in Angular CLI Applications",
-    "scripts": {
-        "build": "tsc -p tsconfig.json",
-        "test": "npm run build && jasmine **/*_spec.js"
-    },
-    "keywords": [
-        "schematics"
-    ],
-    "author": "Stan Silvert",
-    "license": "Apache-2.0",
-    "licenses": [
-        {
-            "type": "Apache-2.0",
-            "url": "http://www.apache.org/licenses/LICENSE-2.0"
-        }
-    ],
-    "schematics": "./src/collection.json",
-    "dependencies": {
-        "@angular-devkit/core": "^0.0.22",
-        "@angular-devkit/schematics": "^0.0.42",
-        "@types/jasmine": "^2.6.0",
-        "@types/node": "^8.0.31",
-        "jasmine": "^2.8.0",
-        "typescript": "^2.5.2"
-    },
-    "devDependencies": {
-        "@schematics/angular": "^0.0.42"
+  "name": "@ssilvert/keycloak-schematic",
+  "version": "0.1.0",
+  "description": "A schematic that installs Keycloak Client in Angular CLI Applications",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && jasmine **/*_spec.js"
+  },
+  "keywords": [
+    "schematics",
+    "keycloak",
+    "angular"
+  ],
+  "author": "Stan Silvert",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ssilvert/keycloak-schematic.git"
+  },
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
     }
+  ],
+  "schematics": "./src/collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "^0.0.22",
+    "@angular-devkit/schematics": "^0.0.42",
+    "@types/node": "^8.0.31"
+  },
+  "devDependencies": {
+    "@schematics/angular": "^0.0.42",
+    "@types/jasmine": "^2.6.0",
+    "jasmine": "^2.8.0",
+    "typescript": "^2.5.2"
+  }
 }
