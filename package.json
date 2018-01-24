@@ -1,6 +1,6 @@
 {
   "name": "@ssilvert/keycloak-schematic",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A schematic that installs Keycloak Client in Angular CLI Applications",
   "scripts": {
     "build": "tsc -p tsconfig.json",
