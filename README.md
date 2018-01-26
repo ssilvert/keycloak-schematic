@@ -12,10 +12,10 @@ from simple username/password management to full-scale enterprise security.
 
 ## Table of Contents
 
-* [Installation] (#installation)
-* [Usage] (#usage)
-* [Documentation] (#documentation)
-* [License] (#license)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Documentation](#documentation)
+* [License](#license)
 
 ## Installation
 
@@ -30,6 +30,7 @@ npm install -g @ssilvert/keycloak-schematic
 ```bash
 ng generate keycloak --collection @ssilvert/keycloak-schematic --clientId=myClientName
 ```
+`clientId` is required.  For other options, see [documentation](https://github.com/ssilvert/keycloak-schematic/wiki).
 
 ## Documentation
 
