@@ -1,27 +1,40 @@
-# keycloak-schematic
-Schematic to add Keycloak support to Angular CLI applications
+## keycloak-schematic
+### Schematic to add [Keycloak](http://www.keycloak.org) support to Angular CLI applications.
+With one simple command, add authentication to your Angular CLI application. 
+Then you have access to a full security suite that provides everything you need
+from simple username/password management to full-scale enterprise security.
 
-### Testing
+## Prerequisites
 
-To test locally, install `@angular-devkit/schematics` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
+* Angular CLI 1.4 or higher
+* Node 6.9.0 or higher
+* NPM 3 or higher
 
-Check the documentation with
+## Table of Contents
+
+* [Installation] (#installation)
+* [Usage] (#usage)
+* [Documentation] (#documentation)
+* [License] (#license)
+
+## Installation
+
+**BEFORE YOU INSTALL:** please read the [prerequisites](#prerequisites)
+
 ```bash
-schematics --help
+npm install -g @ssilvert/keycloak-schematic
 ```
 
-### Unit Testing
-
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
-
-### Publishing
-
-To publish, simply do:
+## Usage
 
 ```bash
-npm run build
-npm publish
+ng generate keycloak --collection @ssilvert/keycloak-schematic --clientId=myClientName
 ```
 
-That's it!
- 
+## Documentation
+
+The documentation for the keycloak-schematic is located in this repo's [wiki](https://github.com/ssilvert/keycloak-schematic/wiki).
+
+## License
+
+Apache 2.0
