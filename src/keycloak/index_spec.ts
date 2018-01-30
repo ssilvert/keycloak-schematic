@@ -35,6 +35,7 @@ describe('keycloak-schematic', () => {
         expect(files.indexOf('/src/app/keycloak-service/keycloak.http.ts')).toBeGreaterThanOrEqual(0);
         expect(files.indexOf('/src/app/keycloak-service/keycloak.js')).toBeGreaterThanOrEqual(0);
         expect(files.indexOf('/src/app/keycloak-service/keycloak.service.ts')).toBeGreaterThanOrEqual(0);
+        expect(files.indexOf('/src/app/keycloak-service/keycloak.guard.ts')).toBeGreaterThanOrEqual(0);
     });
 
     it('adds KeycloakService provider to app.module.ts ', () => {
