@@ -24,7 +24,7 @@ import {KeycloakLoginOptions} from './keycloak.d';
 // 
 import * as Keycloak from './keycloak';
 
-type KeycloakClient = Keycloak.KeycloakInstance;
+export type KeycloakClient = Keycloak.KeycloakInstance;
 type InitOptions = Keycloak.KeycloakInitOptions;
 
 @Injectable()
@@ -52,6 +52,13 @@ export class KeycloakService {
                     reject(errorData);
                 });
         });
+    }
+    
+    /**
+     * Expose the underlying Keycloak javascript adapter.
+     */
+    client(): KeycloakClient {
+        return KeycloakService.keycloakAuth;
     }
 
     authenticated(): boolean {
